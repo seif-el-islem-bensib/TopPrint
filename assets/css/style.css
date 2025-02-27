@@ -925,7 +925,7 @@ blockquote:after,
 }
 
 .quick-donation-section {
-  background-image: url(../../assets/images/homepage1/campaign/bg.jpg);
+  background-image: url(../../assets/images/homepage3/graphic.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1535,6 +1535,136 @@ blockquote:after,
   outline: none;
 }
 
+
+.title-container{
+  background-color: #161743;
+  
+}
+
+.title-container h5 {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.title-container p {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.title-container h5:hover {
+  color: #dc3545;
+}
+
+
+.neta-info-item-inner {
+  height: 100px; /* Fixed height for consistency */
+  width: 100%; /* Ensures full width */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically and horizontally */
+  text-align: center;
+  overflow: hidden; /* Hide overflow if content exceeds the container */
+}
+
+.neta-info-item-inner h6 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate text with ellipsis if it's too long */
+  width: 100%; /* Make sure the h5 takes up the full width of the container */
+  text-align: center;
+}
+.icon-homepage img {
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure it takes the full height of the parent */
+  text-align: center;
+  filter: brightness(0) invert(1); /* Changes color to white */
+  margin-bottom: -25px;
+
+}
+
+
+.icon-homepage-dark img {
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure it takes the full height of the parent */
+  text-align: center;
+  filter: brightness(0) invert(0); /* Changes color to black */
+  margin-bottom: -6px;
+}
+
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-bottom: 25px !important ;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+
+.card {
+width: 300px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+border-radius: 8px;
+overflow: hidden;
+background-color: white;
+text-align: center;
+}
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+.card-title {
+font-size: 1.5em;
+margin: 10px 0;
+color: #333;
+}
+.card-button {
+display: inline-block;
+padding: 10px 20px;
+background-color: #007bff;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+margin-top: 10px;
+transition: background-color 0.3s ease;
+}
+.card-button:hover {
+background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
 .polician-qoute-section {
   background-image: url(../../assets/images/homepage2/qoute/bg.jpg);
 }
@@ -1601,7 +1731,7 @@ blockquote:after,
   margin-top: -2px;
 }
 .polician-qoute-section.style2 {
-  background-image: url(../../assets/images/homepage2/qoute/02.jpg);
+  background-image: url(../../assets/images/homepage3/banner/imp2.jpg);
 }
 .polician-qoute-section.style2 .section-overlay {
   background-color: rgba(22, 23, 67, 0.84);
@@ -1761,6 +1891,7 @@ blockquote:after,
   color: #fff;
 }
 
+
 .neta-info-section {
   margin-top: -150px;
   position: relative;
@@ -1795,6 +1926,19 @@ blockquote:after,
 .neta-info-section .neta-info-item:hover h5 {
   color: #e72f4b;
 }
+
+
+.neta-info-section .neta-info-item .neta-info-item-inner h6 {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 0;
+}
+
+
+.neta-info-section .neta-info-item:hover h6 {
+  color: #e72f4b;
+}
+
 .neta-info-section.style2 {
   padding-top: 0;
   margin-top: 0;
@@ -2583,6 +2727,131 @@ blockquote:after,
 .latest-news-section .small-post-list .post-item:last-child {
   margin-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 150px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close,
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.close {
+  top: 20px;
+  right: 20px;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.post-thumb-image-overlay {
+  position: relative;
+  display: inline-block; /* Keeps the size of the image */
+}
+
+.post-thumb-image-overlay img {
+  width: 100%;
+  display: block;
+}
+
+
+
+
+
+
+.post-thumb-image-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1; /* Adjust this to control visibility */
+}
+
+.post-thumb-image-overlay:hover::before {
+  opacity: 0.7; /* Increase opacity on hover */
+}
+
+
+
+
 .latest-news-section .small-post-list .post-item .post-thumb {
   width: 170px;
   height: 135px;
@@ -2595,6 +2864,7 @@ blockquote:after,
 }
 .latest-news-section .small-post-list .post-item .post-thumb img {
   width: 100%;
+  background-color: rgba(22, 23, 67, 0.68);
 }
 .latest-news-section .small-post-list .post-item .post-content {
   padding-top: 20px;
@@ -3113,7 +3383,7 @@ blockquote:after,
 }
 
 .section-overlay {
-  background-color: rgba(22, 23, 67, 0.92);
+  background-color: rgba(22, 23, 67, 0.756);
 }
 .section-overlay .section-heading h2, .section-overlay .section-heading h3, .section-overlay .section-heading h4, .section-overlay .section-heading h5, .section-overlay .section-heading h6, .section-overlay .section-heading p {
   color: #fff;
@@ -3225,24 +3495,50 @@ blockquote:after,
 }
 
 .post-item {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 @media (max-width: 991px) {
   .post-item {
     margin-bottom: 30px;
   }
 }
+
+
+/* 
 .post-item:hover > .post-thumb img {
   transform: scale(1.1) rotate(0.5deg);
+
 }
 .post-item .post-thumb {
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.772);
 }
+
+.post-item .post-thumb .overlay {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(0, 0, 0, 0.5);  Black background with transparency
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.post-item:hover .post-thumb .overlay {
+  opacity: 1; /* Show overlay on hover 
+}
+*/
+
+
+
 .post-item .post-thumb img {
   max-width: 100%;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+
 }
 .post-item .post-content {
   padding: 25px 25px 25px;
@@ -3591,7 +3887,7 @@ blockquote:after,
 }
 
 .page-header {
-  background-image: url(../../assets/images/page-header/bg.jpg);
+  background-image: url(../../assets/images/homepage3/banner/imp2.jpg);
   margin: 0;
   padding: 0;
   border: none;
@@ -4596,7 +4892,7 @@ blockquote:after,
 }
 .banner.banner-3 {
   height: calc(100vh - 90px);
-  background-image: url(../../assets/images/homepage3/banner/01.jpg);
+  background-image: url(../../assets/images/homepage3/banner/imp.jpg);
 }
 .banner.banner-3 .section-overlay {
   position: absolute;

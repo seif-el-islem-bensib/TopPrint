@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f7;
+        padding: 20px;
+      }
+
+      /* Header Styles */
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px;
+      }
+
+      .header-tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 6px 12px;
+        background-color: #e5e5e7;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #1d1d1f;
+      }
+
+      .header p {
+        font-size: 18px;
+        color: #6e6e73;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* Categories */
+      .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .category {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .category-header {
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid transparent;
+      }
+
+      .category-header:hover {
+        background-color: #f9f9f9;
+      }
+
+      .category-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1d1d1f;
+      }
+
+      .category-description {
+        margin-top: 4px;
+        font-size: 14px;
+        color: #6e6e73;
+      }
+
+      .category-icon {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      /* Subcategories */
+      .subcategories {
+        display: none;
+        padding: 16px;
+        background-color: #f9f9f9;
+      }
+
+      .subcategory {
+        background-color: white;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (min-width: 768px) {
+        .subcategory {
+          flex-direction: row;
+        }
+      }
+
+      .subcategory-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+
+      @media (min-width: 768px) {
+        .subcategory-img {
+          width: 200px;
+        }
+      }
+
+      .subcategory-content {
+        flex-grow: 1;
+      }
+
+      .subcategory-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #1d1d1f;
+      }
+
+      .subcategory-description {
+        font-size: 14px;
+        color: #6e6e73;
+      }
+
+      /* Active States */
+      .category.active .category-header {
+        border-bottom: 1px solid #e5e5e7;
+      }
+
+      .category.active .category-icon {
+        transform: rotate(90deg);
+      }
+
+      .category.active .subcategories {
+        display: block;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 28px;
+        }
+        
+        .header p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  
+
+      <div class="categories">
+        <!-- Digital Printing -->
+        <div class="category">
+          <div class="category-header" onclick="toggleCategory(this.parentElement)">
+            <div>
+              <h2 class="category-title">Digital Printing</h2>
+              <p class="category-description">Modern printing method using digital files</p>
+            </div>
+            <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="subcategories">
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=150" alt="Laser Printing" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Laser Printing</h3>
+                <p class="subcategory-description">Uses electrostatic digital printing process</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=200&h=150" alt="Inkjet Printing" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Inkjet Printing</h3>
+                <p class="subcategory-description">Propels droplets of ink onto paper or substrate</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&h=150" alt="LED Printing" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">LED Printing</h3>
+                <p class="subcategory-description">Similar to laser but uses LED light source</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offset Lithography -->
+        <div class="category">
+          <div class="category-header" onclick="toggleCategory(this.parentElement)">
+            <div>
+              <h2 class="category-title">Offset Lithography</h2>
+              <p class="category-description">Traditional high-quality commercial printing method</p>
+            </div>
+            <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="subcategories">
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?auto=format&fit=crop&w=200&h=150" alt="Sheet-fed Offset" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Sheet-fed Offset</h3>
+                <p class="subcategory-description">Uses individual sheets of paper</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1581077968667-57359e092fb2?auto=format&fit=crop&w=200&h=150" alt="Web Offset" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Web Offset</h3>
+                <p class="subcategory-description">Uses rolls of paper for higher volumes</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=200&h=150" alt="Coldset Offset" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Coldset Offset</h3>
+                <p class="subcategory-description">Ink dries through absorption</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flexography -->
+        <div class="category">
+          <div class="category-header" onclick="toggleCategory(this.parentElement)">
+            <div>
+              <h2 class="category-title">Flexography</h2>
+              <p class="category-description">Relief printing using flexible printing plates</p>
+            </div>
+            <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="subcategories">
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1575807388631-a39645a48aa1?auto=format&fit=crop&w=200&h=150" alt="Water-based Flexo" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Water-based Flexo</h3>
+                <p class="subcategory-description">Uses water-based inks</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=200&h=150" alt="Solvent-based Flexo" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Solvent-based Flexo</h3>
+                <p class="subcategory-description">Uses solvent-based inks</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1601370690183-1c7965809aff?auto=format&fit=crop&w=200&h=150" alt="UV Flexo" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">UV Flexo</h3>
+                <p class="subcategory-description">Uses UV-curable inks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screen Printing -->
+        <div class="category">
+          <div class="category-header" onclick="toggleCategory(this.parentElement)">
+            <div>
+              <h2 class="category-title">Screen Printing</h2>
+              <p class="category-description">Versatile technique using mesh to transfer ink</p>
+            </div>
+            <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="subcategories">
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1596558450268-9c27524ba856?auto=format&fit=crop&w=200&h=150" alt="Flat Screen" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Flat Screen</h3>
+                <p class="subcategory-description">For standard flat substrate printing</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1609082693907-89cf93f5f490?auto=format&fit=crop&w=200&h=150" alt="Rotary Screen" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Rotary Screen</h3>
+                <p class="subcategory-description">Uses cylindrical screens for continuous printing</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&w=200&h=150" alt="Specialty Screen" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Specialty Screen</h3>
+                <p class="subcategory-description">For unique materials and effects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gravure Printing -->
+        <div class="category">
+          <div class="category-header" onclick="toggleCategory(this.parentElement)">
+            <div>
+              <h2 class="category-title">Gravure Printing</h2>
+              <p class="category-description">Intaglio printing technique for high volume</p>
+            </div>
+            <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="subcategories">
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1559837627-4d44d9afe8aa?auto=format&fit=crop&w=200&h=150" alt="Publication Gravure" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Publication Gravure</h3>
+                <p class="subcategory-description">For magazines and catalogs</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1531070292150-85a9dc8c22a9?auto=format&fit=crop&w=200&h=150" alt="Packaging Gravure" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Packaging Gravure</h3>
+                <p class="subcategory-description">For flexible packaging materials</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1615529162406-f8895a5d4d24?auto=format&fit=crop&w=200&h=150" alt="Product Gravure" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Product Gravure</h3>
+                <p class="subcategory-description">For products like wallpaper and flooring</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialty Printing -->
+        <div class="category">
+          <div class="category-header" onclick="toggleCategory(this.parentElement)">
+            <div>
+              <h2 class="category-title">Specialty Printing</h2>
+              <p class="category-description">Unique printing techniques for special applications</p>
+            </div>
+            <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="subcategories">
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1581093196277-9f608bb3d4ed?auto=format&fit=crop&w=200&h=150" alt="3D Printing" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">3D Printing</h3>
+                <p class="subcategory-description">Additive manufacturing technology</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1592670125310-7644beee5b2f?auto=format&fit=crop&w=200&h=150" alt="Letterpress" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Letterpress</h3>
+                <p class="subcategory-description">Relief printing with direct impression</p>
+              </div>
+            </div>
+            <div class="subcategory">
+              <img src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?auto=format&fit=crop&w=200&h=150" alt="Foil Stamping" class="subcategory-img">
+              <div class="subcategory-content">
+                <h3 class="subcategory-title">Foil Stamping</h3>
+                <p class="subcategory-description">Uses heat and pressure to apply metallic foil</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleCategory(category) {
+        category.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

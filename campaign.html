@@ -1,18 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>Neta</title>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/swiper.min.css">
 	<link rel="stylesheet" href="assets/css/lightcase.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		/* Base Styles */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			transition: all 0.3s ease;
+		}
+
+
+		/* Header Styles */
+		.header {
+			text-align: center;
+			margin-bottom: 40px;
+			padding: 20px;
+		}
+
+		.header-tag {
+			display: inline-block;
+			margin-bottom: 12px;
+			padding: 6px 12px;
+			background-color: #e5e5e7;
+			border-radius: 20px;
+			font-size: 14px;
+			font-weight: 500;
+			color: #555;
+		}
+
+		.header h1 {
+			font-size: 36px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			color: #1d1d1f;
+		}
+
+		.header p {
+			font-size: 18px;
+			color: #6e6e73;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		/* Container */
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		/* Categories */
+		.categories {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		.category {
+			background-color: white;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+		}
+
+		.category-header {
+			padding: 20px;
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid transparent;
+		}
+
+		.category-header:hover {
+			background-color: #f9f9f9;
+		}
+
+		.category-title {
+			font-size: 20px;
+			font-weight: 600;
+			color: #1d1d1f;
+		}
+
+		.category-description {
+			margin-top: 4px;
+			font-size: 14px;
+			color: #6e6e73;
+		}
+
+		.category-icon {
+			width: 20px;
+			height: 20px;
+			transition: transform 0.3s ease;
+		}
+
+		/* Subcategories */
+		.subcategories {
+			display: none;
+			padding: 16px;
+			background-color: #f9f9f9;
+		}
+
+		.subcategory {
+			background-color: white;
+			border-radius: 8px;
+			padding: 16px;
+			margin-bottom: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		}
+
+		@media (min-width: 768px) {
+			.subcategory {
+				flex-direction: row;
+			}
+		}
+
+		.subcategory-img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			border-radius: 6px;
+		}
+
+		@media (min-width: 768px) {
+			.subcategory-img {
+				width: 200px;
+			}
+		}
+
+		.subcategory-content {
+			flex-grow: 1;
+		}
+
+		.subcategory-title {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 8px;
+			color: #1d1d1f;
+		}
+
+		.subcategory-description {
+			font-size: 14px;
+			color: #6e6e73;
+		}
+
+		/* Active States */
+		.category.active .category-header {
+			border-bottom: 1px solid #e5e5e7;
+		}
+
+		.category.active .category-icon {
+			transform: rotate(90deg);
+		}
+
+		.category.active .subcategories {
+			display: block;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			.header h1 {
+				font-size: 28px;
+			}
+
+			.header p {
+				font-size: 16px;
+			}
+		}
+	</style>
 </head>
+
 <body class="body-padding">
 	<!-- preloader start -->
 	<div id="loading">
@@ -28,75 +200,34 @@
 	<!-- preloader end -->
 
 
+
 	<!-- Start Header -->
 	<header class="header">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg p-lg-0">
-				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/01.png" alt="logo"></a>
-				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/02.png" alt="logo"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
+						alt="logo" style="width: 150px; height: auto;"></a>
+				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
+						alt="logo" style="width: 150px; height: auto;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
 					<span class="fa fa-bars"></span>
 				</button>
-			  
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="nav navbar-nav ml-auto">
-						<li><a href="#0">Home</a>
-							<ul class="submenu">
-								<li><a href="index.html">Homepage 1</a></li>
-								<li><a href="homepage2.html">Homepage 2</a></li>
-								<li><a href="homepage3.html">Homepage 3</a></li>
-								<li><a href="homepage4.html">Homepage 4</a></li>
-								<li><a href="homepage5.html">Homepage 5</a></li>
-								<li><a href="homepage6.html">Homepage 6</a></li>
-								<li><a href="homepage7.html">Homepage 7</a></li>
-							</ul>
+						<li class="active"><a href="index.html">Acceuil</a>
 						</li>
-						<li><a href="#0">Pages</a>
-							<ul class="submenu">
-								<li><a href="#0">Causes</a>
-									<ul class="submenu">
-										<li><a href="cause-list-view.html">Causes List View</a></li>
-										<li><a href="causes-grid-view.html">Causes Grid View</a></li>
-										<li><a href="cause-single.html">Causes Single</a></li>
-									</ul>
-								</li>
-								<li><a href="volunteer.html">Volunteer</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="coming-soon.html">Coming Soon</a></li>
-								<li><a href="404.html">404</a></li>
-							</ul>
+						<li><a href="campaign.html">Services</a></li>
+						<li><a class="page-scroll" href="index.html#realisation">Réalisations</a>
 						</li>
-						<li><a href="bio-graphy.html">Biography</a></li>
-						<li><a href="#0">Blog</a>
-							<ul class="submenu">
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="single.html">Blog Single</a></li>
-							</ul>
+						<li><a href="index.html#about">A propos de nous</a>
 						</li>
-						<li class="active"><a href="#0">Campaign</a>
-							<ul class="submenu">
-								<li class="active-submenu"><a href="campaign.html">Campaign</a></li>
-								<li><a href="campaign-detail.html">Campaign Details</a></li>
-							</ul>
-						</li>
-						<li><a href="#0">Gallery</a>
-							<ul class="submenu">
-								<li><a href="gallery-2col.html">Gallery 2col</a></li>
-								<li><a href="gallery-3col.html">Gallery 3col</a></li>
-								<li><a href="gallery-4col.html">Gallery 4col</a></li>
-								<li><a href="gallery-massonry.html">Gallery massonry</a></li>
-							</ul>
-						</li>
-						<li><a href="#0">Shop</a>
-							<ul class="submenu">
-								<li><a href="shop.html">Shop</a></li>
-								<li><a href="product-detail.html">Product Detail</a></li>
-								<li><a href="cart.html">Product Cart</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>	
+
+
+						<li><a href="index.html#contact">Contact</a></li>
 					</ul>
-					<a href="donate.html" class="custom-btn donate">Donate Now</a>
+
 				</div>
 			</nav>
 		</div>
@@ -104,16 +235,15 @@
 	<!-- End Header -->
 
 
-
 	<!-- start page header -->
 	<section class="page-header">
 		<div class="overlay">
 			<div class="container">
 				<div class="page-header-content">
-					<h2>Campaign</h2>
+					<h2>Services d'impression</h2>
 					<ul class="breadcrumb">
-						<li><a href="#">Home</a></li>
-						<li>Campaign</li>
+						<li><a href="#">Acceuil</a></li>
+						<li>Services</li>
 					</ul>
 				</div>
 			</div>
@@ -124,273 +254,347 @@
 
 
 
-	<!-- start main content area -->
-	<section class="site-content campaign-page section-bg-color section-padding-140">
+
+
+
+	<body>
+
+
 		<div class="container">
-			<div class="section-wrapper">
-				<div class="campaign-list row justify-content-center">
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/01.jpg" alt="campaign thumb"></a>
+
+
+			<div class="categories">
+				<!-- Digital Printing -->
+				<div class="category">
+					<div class="category-header" onclick="toggleCategory(this.parentElement)">
+						<div>
+							<div class="icon-homepage-dark"
+								style="display: flex; flex-direction: row; align-items: center; margin: 15px; ">
+								<img src="assets/images/homepage3/icon/big.png" alt="politician" class="w-100">
+
+
+								
+
 							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Election Campaign.</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
+							<h2 class="category-title">Impression Grand Format</h2>
+							<p class="category-description">Solutions d'impression grand format pour une visibilité maximale et un impact visuel puissant.</p>
+						</div>
+
+						<svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="subcategories">
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/Agence-graphics-realisation-graphisme-bache-grand-format-fleuriste.avif" alt="Laser Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Baches</h3>
+								<p class="subcategory-description">Impression sur bâches résistantes et de haute qualité pour une communication grand format efficace.</p>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/02.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Aniual Convention 2020</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/610-decoupe-de-vinyle-adhesif-610.jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Vinyle</h3>
+								<p class="subcategory-description">Impression sur vinyle adhésif pour une signalétique durable et personnalisée.</p>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/03.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Leader Union Council.</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/04.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Meetup with President..</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/05.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Disclosure City Hospital.</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/06.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Women's Conference.</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/07.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Meetup with President.</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/08.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">Disclosure City Hospital.</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="campaign-item style2">
-							<div class="campaign-thumb">
-								<a href="#"><img src="assets/images/campaign/09.jpg" alt="campaign thumb"></a>
-							</div>
-							<div class="campaign-content">
-								<h5 class="campaign-title"><a href="#">GWomen's Conference.</a></h5>
-								<ul class="campaign-detail-list">
-									<li><i class="fa fa-calendar"></i>26 March, 2020</li>
-									<li><i class="fa fa-clock-o"></i>10AM - 11AM</li>
-									<li><i class="fa fa-map-marker"></i>Raven Ridge, Silver Lake, USA</li>
-								</ul>
-								<a href="#" class="custom-btn custom-btn-sm">View Details</a>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/all.png" alt="Inkjet Printing" class="subcategory-img">
+					
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Habillage different support</h3>
+								<p class="subcategory-description">Habillage sur PVC et polypropylène pour des formes variées, y compris tête de gondole, garantissant un affichage impactant et durable.</p>
 							</div>
 						</div>
 					</div>
 				</div>
+
+				<!-- Offset Lithography -->
+				<div class="category">
+					<div class="category-header" onclick="toggleCategory(this.parentElement)">
+						<div>
+							<div class="icon-homepage-dark"
+								style="display: flex; flex-direction: row; align-items: center; margin: 15px; ">
+								<img src="assets/images/homepage3/icon/car.png" alt="politician" class="w-100">
+							
+							</div>
+							<h2 class="category-title">Habillage véhicule	</h2>
+						
+							<p class="category-description">Habillage de véhicules sur mesure pour une visibilité maximale et une communication impactante.</p>
+						</div>
+						<svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="subcategories">
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/home-one-img.png" alt="Inkjet Printing" class="subcategory-img">
+							
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Habillage camion</h3>
+								<p class="subcategory-description">Habillage de camions avec des impressions haute qualité pour une communication mobile percutante.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/habillagevoiture-1024x582.webp" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Habillage voiture</h3>
+								<p class="subcategory-description">Habillage de voiture personnalisé pour une publicité mobile efficace et attrayante.</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				<!-- Flexography -->
+				<div class="category">
+					<div class="category-header" onclick="toggleCategory(this.parentElement)">
+						<div>
+							<div class="icon-homepage-dark"
+								style="display: flex; flex-direction: row; align-items: center; margin: 15px; ">
+								<img src="assets/images/homepage3/icon/little.png" alt="politician" class="w-100">
+							
+							</div>
+							<h2 class="category-title">Impression petite Format	</h2>
+						
+							<p class="category-description">Impression petit format de haute qualité pour une communication précise et percutante.</p>
+						</div>
+					</div>
+					<div class="subcategories">
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/R.jpg" alt="Inkjet Printing" class="subcategory-img">
+						
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Flyer</h3>
+								<p class="subcategory-description">Impression de flyers personnalisés pour une diffusion ciblée et un impact immédiat.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/R (2).jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Carte visite</h3>
+								<p class="subcategory-description">Cartes de visite élégantes et professionnelles pour laisser une impression durable.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/R (1).jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Catalogue</h3>
+								<p class="subcategory-description">Impression de catalogues détaillés et attractifs pour présenter vos produits et services de manière professionnelle.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Screen Printing -->
+				<div class="category">
+					<div class="category-header" onclick="toggleCategory(this.parentElement)">
+						<div>
+							<div class="icon-homepage-dark"
+								style="display: flex; flex-direction: row; align-items: center; margin: 15px; ">
+								<img src="assets/images/homepage3/icon/billboard.png" alt="politician" class="w-100">
+							
+							</div>
+							<h2 class="category-title">Support de communication	</h2>
+						
+							<p class="category-description">Supports de communication variés pour promouvoir efficacement votre marque et atteindre votre public cible.</p>
+						</div>
+					
+						<svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+						
+					</div>
+					<div class="subcategories">
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/totem-pub.webp" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Totem</h3>
+								<p class="subcategory-description">Totems personnalisés pour une signalétique percutante et une visibilité optimale de votre message.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/2flags.jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Flag</h3>
+								<p class="subcategory-description">Flags personnalisés pour une communication dynamique et une visibilité maximale en extérieur.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/Real-Estate-Blue-and-Yellow-Roll-Up-Template-Design-1024x1024.jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Roll-up</h3>
+								<p class="subcategory-description">Roll-up personnalisés pour une présentation professionnelle et une communication mobile, idéale pour vos événements.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gravure Printing -->
+				<div class="category">
+					<div class="category-header" onclick="toggleCategory(this.parentElement)">
+						
+						<div>
+							<div class="icon-homepage-dark"
+								style="display: flex; flex-direction: row; align-items: center; margin: 15px; ">
+								<img src="assets/images/homepage3/icon/vitrine.png" alt="politician" class="w-100">
+							
+							</div>
+							<h2 class="category-title">Vitrine	</h2>
+						
+							<p class="category-description">Impression pour vitrines, créant une présentation attrayante et percutante pour captiver l'attention des passants.</p>
+						</div>
+						<svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="subcategories">
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/vitrine2017.jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Vitrine découpe</h3>
+								<p class="subcategory-description">Vitrine découpée sur mesure pour une mise en valeur originale et créative de votre espace commercial.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/habillage-vitrine-vinyle-polymere.jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Vitrine complet </h3>
+								<p class="subcategory-description">Habillage de vitrine complet pour une décoration harmonieuse et une visibilité maximale de vos produits ou services.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/decoupe.jpg" alt="Inkjet Printing" class="subcategory-img">
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Vitrine sablé</h3>
+								<p class="subcategory-description">Vitrine sablée pour un effet élégant et moderne, alliant confidentialité et esthétique.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Specialty Printing -->
+				<div class="category">
+					<div class="category-header" onclick="toggleCategory(this.parentElement)">
+						<div>
+							<div class="icon-homepage-dark"
+								style="display: flex; flex-direction: row; align-items: center; margin: 15px; ">
+								<img src="assets/images/homepage3/icon/cadeau.png" alt="politician" class="w-100">
+							
+							</div>
+							<h2 class="category-title">Cadeaux	</h2>
+						
+							<p class="category-description">Cadeaux personnalisés pour offrir une touche unique et mémorable à vos clients ou collaborateurs.</p>
+						</div>
+						<svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 6L15 12L9 18" stroke="#6e6e73" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="subcategories">
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/3.png" alt="Inkjet Printing" class="subcategory-img">
+							
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Textile</h3>
+								<p class="subcategory-description">Impression sur textile pour des supports durables et de qualité, idéaux pour la promotion de votre marque ou la personnalisation d'événements.</p>
+							</div>
+						</div>
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/Pink and Blue Modern 3d Printing Services Facebook Post (1).png" alt="Inkjet Printing" class="subcategory-img">
+							
+							<div class="subcategory-content">
+								<h3 class="subcategory-title">Fournitures</h3>
+								<p class="subcategory-description">Fournitures variées pour répondre à tous vos besoins en communication visuelle et marketing.</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
 			</div>
 		</div>
-	</section>
-	<!-- end main content area -->
 
-	
+		<script>
+			function toggleCategory(category) {
+				category.classList.toggle('active');
+			}
+		</script>
+	</body>
+
+
+
+
+
+
 
 
 
 
 	<!-- start footer section -->
 	<footer class="footer-section">
-		<div class="footer-top section-padding-100">
+		<div class="footer-top section-padding-80">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-lg-4 col-sm-6">
+						<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
+								alt="logo" style="width: 150px; height: auto;"></a>
+						<p>Profitez d’une location flexible, d’un matériel de haute qualité et d’un service client
+							réactif.
+							Que ce soit pour un événement, un projet professionnel ou un besoin ponctuel, nous vous
+							garantissons fiabilité et satisfaction.</p>
+					</div>
+					<div class="col-lg-4 col-sm-6">
 						<div class="widget">
-							<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/02.png" alt="logo"></a>
-							<p>Globally brand stand-alone processes and enable methods of empowerment. Efficient provide access to world wide methods vis-a-vis revolution.</p>
+
+							-- <h5>Siége Social</h5>
+
 							<ul class="contact-info">
-								<li><i class="fa fa-map-marker"></i>Rodney Square,Wilmington USA</li>
-								<li><i class="fa fa-phone"></i>4588 957 8457</li>
-								<li><i class="fa fa-envelope"></i>contact@yourmail.com</li>
+								<li><i class="fa fa-map-marker"></i>5,Rue abdelmoumen Ben Ali,Alain Savary -1002 Tunis
+								</li>
+								<li><i class="fa fa-phone"></i>(+216 71 78 34 04)</li>
+								<li><i class="fa fa-phone"></i>(+216 71 28 05 34)</li>
+								<li><i class="fa fa-envelope"></i>avantages@avantagestunisie.com</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="widget">
+							-- <h5>Show Room</h5>
+
+							<ul class="contact-info">
+								<li><i class="fa fa-map-marker"></i>12,Rue ElIsfahani,choutrana 1 -2035</li>
+								<li><i class="fa fa-phone"></i>(+216 70 94 81 01)</li>
+								<li><i class="fa fa-phone"></i>(+216 70 94 81 80)</li>
+								<li><i class="fa fa-envelope"></i>(+216 70 94 81 80)</li>
+								<li><i class="fa fa-envelope"></i>showroomavantages@avantagestunisie.com</li>
 							</ul>
 							<ul class="social-media">
 								<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
 							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="widget">
-							<h5>Recent News</h5>
-							<div class="small-post-list">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="single.html"><img src="assets/images/small-thumb/01.jpg" alt="thumb"></a>
-									</div>
-									<div class="post-content">
-										<a href="single.html">Holisticly fashion multimedia based synergy vis-a-vis granular.</a>
-										<ul class="post-meta">
-											<li>26 March, 2020</li>
-										</ul>
-									</div>
-								</div>
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="single.html"><img src="assets/images/small-thumb/02.jpg" alt="thumb"></a>
-									</div>
-									<div class="post-content">
-										<a href="single.html">Holisticly fashion multimedia based synergy vis-a-vis granular.</a>
-										<ul class="post-meta">
-											<li>26 March, 2020</li>
-										</ul>
-									</div>
-								</div>
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="single.html"><img src="assets/images/small-thumb/03.jpg" alt="thumb"></a>
-									</div>
-									<div class="post-content">
-										<a href="single.html">Holisticly fashion multimedia based synergy vis-a-vis granular.</a>
-										<ul class="post-meta">
-											<li>26 March, 2020</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="widget">
-							<h5>Recent Tweets</h5>
-							<div class="tweet-list">
-								<div class="tweet-item">
-									<div class="tweet-thumb">
-										<a href="#"><img src="assets/images/tweet/01.png" alt="thumb"></a>
-									</div>
-									<div class="tweet-content">
-										<a class="name" href="#">Stella Gabriella <span>@stellagabriella</span></a>
-										<p>Holisticly fabricate state of the art growth. <a href="#">#webenabled</a> band: <a href="#">stella.org/your-voice.</a></p>
-									</div>
-								</div>
-								<div class="tweet-item">
-									<div class="tweet-thumb">
-										<a href="#"><img src="assets/images/tweet/01.png" alt="thumb"></a>
-									</div>
-									<div class="tweet-content">
-										<a class="name" href="#">Stella Gabriella <span>@stellagabriella</span></a>
-										<p>Holisticly fabricate state of the art growth. <a href="#">#webenabled</a> band: <a href="#">stella.org/your-voice.</a></p>
-									</div>
-								</div>
-								<div class="tweet-item">
-									<div class="tweet-thumb">
-										<a href="#"><img src="assets/images/tweet/01.png" alt="thumb"></a>
-									</div>
-									<div class="tweet-content">
-										<a class="name" href="#">Stella Gabriella <span>@stellagabriella</span></a>
-										<p>Holisticly fabricate state of the art growth. <a href="#">#webenabled</a> band: <a href="#">stella.org/your-voice.</a></p>
-									</div>
-								</div>
-							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="footer-bottom">
-			<p>&copy; 2020 <a href="index.html">Neta</a>Designed By <a href="https://themeforest.net/user/Labartisan/portfolio" target="_blank">Labartisan</a></p>
+			<p>&copy; 2025 <a href="index.html">Avantages</a>
 		</div>
 	</footer>
 	<!-- end footer section -->
 
 
 
+
 	<script src='assets/js/plugins.js'></script>
 	<script src='assets/js/function.js'></script>
 </body>
+
 </html>
