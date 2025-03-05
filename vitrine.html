@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/swiper.min.css">
+	<link rel="stylesheet" href="assets/css/lightcase.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+	    body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .category {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            text-align: center;
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .subcategories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .subcategory {
+            width: 30%;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .subcategory:hover {
+            transform: translateY(-5px);
+        }
+
+        .subcategory img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .subcategory-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .subcategory-description {
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .subcategories {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .subcategory {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+	</style>
+
+	
+</head>
+
+<body class="body-padding">
+	<!-- preloader start -->
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+				<div class="object" id="object_four"></div>
+			</div>
+		</div>
+	</div>
+	<!-- preloader end -->
+
+
+
+	<!-- Start Header -->
+	<header class="header">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg p-lg-0">
+				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
+						alt="logo" style="width: 150px; height: auto;"></a>
+				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
+						alt="logo" style="width: 150px; height: auto;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="nav navbar-nav ml-auto">
+						<li class="active"><a href="index.html">Acceuil</a>
+						</li>
+						<li><a href="index.html#services">Services</a></li>
+						<li><a class="page-scroll" href="index.html#realisation">Réalisations</a>
+						</li>
+						<li><a href="index.html#about">A propos de nous</a>
+						</li>
+
+
+						<li><a href="index.html#contact">Contact</a></li>
+					</ul>
+
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
+
+
+	<!-- start page header -->
+	<section class="page-header">
+		<div class="overlay">
+			<div class="container">
+				<div class="page-header-content">
+					<h1>Vitrine</h1>
+					<ul class="breadcrumb">
+						<li><a href="#">Acceuil</a></li>
+						<li>Services</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end page header -->
+
+
+
+
+
+
+
+	<body>
+
+
+		<div class="container">
+
+
+			<div class="categories">
+
+
+				<div class="centered-container">
+					<div class="centered-container">
+						<div class="icon-homepage-dark " style="display: flex; flex-direction: row; margin: 30px; ">
+							<img src="assets/images/homepage3/icon/vitrine.png" alt="politician" class="w-100">
+
+
+
+						</div>
+						<h2 class="category-title">Vitrine</h2>
+						<p class="category-description">Solutions d'impression grand format pour une visibilité
+							maximale et un impact visuel puissant.</p>
+					</div>
+					<br><br>
+
+				</div>
+
+				<div class="category">
+					<div class="category-title">Vitrine découpe</div>
+					<div class="subcategories">
+						
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/vitrine2017.jpg" alt="Subcategory 1">
+							
+						</div>
+			
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/decoupe2.jpeg" alt="Subcategory 2">
+							
+						</div>
+			
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/decoup3.jpg" alt="Subcategory 3">
+							
+						</div>
+			
+					</div>
+				</div>
+				
+				
+			
+				<div class="category">
+					<div class="category-title">Vitrine sablé</div>
+					<div class="subcategories">
+						
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/sable2.jpg" alt="Subcategory 1">
+						
+						</div>
+			
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/sable3.webp" alt="Subcategory 2">
+							
+						</div>
+			
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/decoupe.jpg" alt="Subcategory 3">
+							
+						</div>
+			
+					</div>
+				</div>
+
+
+				<div class="category">
+					<div class="category-title">Vitrine complet</div>
+					<div class="subcategories">
+						
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/comp.jpeg" alt="Subcategory 1">
+						
+						</div>
+			
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/comp2.webp" alt="Subcategory 2">
+							
+						</div>
+			
+						<div class="subcategory">
+							<img src="assets/images/homepage3/services/complet3.jpg" alt="Subcategory 3">
+							
+						</div>
+			
+					</div>
+				</div>
+			
+				
+			
+				
+
+			</div>
+		</div>
+
+		
+	</body>
+
+
+
+
+
+
+
+
+
+
+	<!-- start footer section -->
+	<footer class="footer-section">
+		<div class="footer-top section-padding-80">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-sm-6">
+						<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
+								alt="logo" style="width: 150px; height: auto;"></a>
+						<p>Profitez d’une location flexible, d’un matériel de haute qualité et d’un service client
+							réactif.
+							Que ce soit pour un événement, un projet professionnel ou un besoin ponctuel, nous vous
+							garantissons fiabilité et satisfaction.</p>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="widget">
+
+							-- <h5>Siége Social</h5>
+
+							<ul class="contact-info">
+								<li><i class="fa fa-map-marker"></i>5,Rue abdelmoumen Ben Ali,Alain Savary -1002 Tunis
+								</li>
+								<li><i class="fa fa-phone"></i>(+216 71 78 34 04)</li>
+								<li><i class="fa fa-phone"></i>(+216 71 28 05 34)</li>
+								<li><i class="fa fa-envelope"></i>avantages@avantagestunisie.com</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="widget">
+							-- <h5>Show Room</h5>
+
+							<ul class="contact-info">
+								<li><i class="fa fa-map-marker"></i>12,Rue ElIsfahani,choutrana 1 -2035</li>
+								<li><i class="fa fa-phone"></i>(+216 70 94 81 01)</li>
+								<li><i class="fa fa-phone"></i>(+216 70 94 81 80)</li>
+								<li><i class="fa fa-envelope"></i>(+216 70 94 81 80)</li>
+								<li><i class="fa fa-envelope"></i>showroomavantages@avantagestunisie.com</li>
+							</ul>
+							<ul class="social-media">
+								<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2025 <a href="index.html">Avantages</a>
+		</div>
+	</footer>
+	<!-- end footer section -->
+
+
+
+
+	<script src='assets/js/plugins.js'></script>
+	<script src='assets/js/function.js'></script>
+</body>
+
+</html>

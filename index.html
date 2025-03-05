@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Neta</title>
+	<title>Topprint</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
@@ -48,7 +48,7 @@
 					<ul class="nav navbar-nav ml-auto">
 						<li class="active"><a href="index.html">Acceuil</a>
 						</li>
-						<li><a href="campaign.html">Services</a></li>
+						<li><a href="index.html#services">Services</a></li>
 						<li><a class="page-scroll" href="index.html#realisation">Réalisations</a>
 						</li>
 						<li><a href="index.html#about">A propos de nous</a>
@@ -74,7 +74,7 @@
 					<h1 class="text-capitalize"><span class="d-sm-block">Impression</span> Sans Limites</h1>
 
 					<h6>Des solutions d'impression pour tous vos projets, petits et grands</h6>
-					<a  class="custom-btn">Commençons dès maintenant</a>
+					<a class="custom-btn">Commençons dès maintenant</a>
 				</div>
 			</div>
 		</div>
@@ -83,7 +83,7 @@
 
 
 	<!-- start neta-info section -->
-	<section class="neta-info-section">
+	<section id="services" class="neta-info-section">
 		<div class="container">
 			<div class="neta-info row justify-content-center no-gutters">
 				<div class="col-lg-4 col-sm-6">
@@ -93,7 +93,8 @@
 							<img src="assets/images/homepage3/icon/big.png" alt="politician" class="w-100">
 
 						</div>
-						<div class="neta-info-item-inner">
+						<div onclick="window.location.href='grand.html'" class="neta-info-item-inner">
+							
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Impression Grand Format</h6>
 							<br><br>
@@ -109,7 +110,7 @@
 							<img src="assets/images/homepage3/icon/car.png" alt="politician" class="w-100">
 
 						</div>
-						<div class="neta-info-item-inner">
+						<div  onclick="window.location.href='habillage-v.html'" class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Habillage véhicule </h6>
 							<br><br>
@@ -118,7 +119,7 @@
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
-					<div class="neta-info-item"
+					<div  onclick="window.location.href='petit.html'" class="neta-info-item"
 						style="display: flex; flex-direction: column; align-items: center; margin: 15px; ">
 						<div class="icon-homepage-dark">
 							<img src="assets/images/homepage3/icon/little.png" alt="politician" class="w-100">
@@ -134,7 +135,7 @@
 
 
 				<div class="col-lg-4 col-sm-6">
-					<div class="neta-info-item"
+					<div  onclick="window.location.href='support.html'" class="neta-info-item"
 						style="display: flex; flex-direction: column; align-items: center; margin: 15px; ">
 						<div class="icon-homepage-dark">
 							<img src="assets/images/homepage3/icon/billboard.png" alt="politician" class="w-100">
@@ -155,7 +156,7 @@
 							<img src="assets/images/homepage3/icon/vitrine.png" alt="politician" class="w-100">
 
 						</div>
-						<div class="neta-info-item-inner">
+						<div  onclick="window.location.href='vitrine.html'" class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Vitrine</h6>
 							<br><br>
@@ -164,7 +165,7 @@
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
-					<div class="neta-info-item"
+					<div  onclick="window.location.href='cadeau.html'" class="neta-info-item"
 						style="display: flex; flex-direction: column; align-items: center; margin: 15px;">
 						<div class="icon-homepage-dark">
 							<img src="assets/images/homepage3/icon/cadeau.png" alt="politician" class="w-100">
@@ -191,7 +192,7 @@
 
 	<!-- start politician-qoute -->
 	<section class="polician-qoute-section style2">
-		<div  class="section-overlay section-padding-140">
+		<div class="section-overlay section-padding-140">
 			<div class="container">
 				<div class="qoute text-center">
 					<h4>Chez nous, chaque projet d'impression est une transformation de vos idées en un produit
@@ -209,45 +210,62 @@
 
 
 	<!-- start latest news section  -->
-	<section id="realisation" class="latest-news-section section-padding-140 section-bg-color">
+	<section id="realisation" class="latest-news-section section-padding-180 section-bg-color ">
 		<div class="container">
 			<div class="section-heading">
 				<h2>Réalisations</h2>
-				<p>Des impressions sur mesure qui allient qualité, créativité et précision</p>
+				
 			</div>
-			<div class="section-wrapper column justify-content-center align-items-center text-center ">
-				<div class="post-thumb-image-overlay w-50 mx-auto" onclick="openModal(0, 0)">
-					<a  ><img src="assets/images/homepage3/realisation/rea1.jpg"  alt="thumb" 
-							class="img-fluid" ></a>
-				</div>
-				<div class="modal" id="imageModal">
-					<button class="close" onclick="closeModal()">X</button>
-					<button class="prev" onclick="prevImage()">&#10094;</button>
-					<img id="modalImg">
-					<button class="next" onclick="nextImage()">&#10095;</button>
-				</div>
 
-				<div class="post-item d-flex justify-content-center align-items-center text-center w-50 mx-auto">
+			<div class="post-item d-flex justify-content-center align-items-center text-center  ">
+				<div class="card">
+					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
+					<div class="container">
 
-
-					<div class="post-thumb ">
-						<div id="about"	 class="post-content">
-							<h6 class="title"><a onclick="openModal(0, 0)">Quelques exemples de nos travaux, réalisés avec expertise et passion.</a></h6>
-							<ul class="post-meta pb-0">
-								<li>Depuit: <a >Topprint</a></li>
-								<li>26 Mars, 2020</li>
-								<li><i class="fa fa-comments"></i>06</li>
-
-							</ul>
-
-
-						</div>
 					</div>
-
 				</div>
 
+				<div class="card">
+					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
+					<div class="container">
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
+					<div class="container">
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
+					<div class="container">
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
+					<div class="container">
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
+					<div class="container">
+
+					</div>
+				</div>
+
+				<div class="section-heading">
+			
+					<p>Des impressions sur mesure qui allient qualité, créativité et précision</p>
+				</div>
+	
 
 			</div>
+
+
+		</div>
 		</div>
 	</section>
 	<!-- end latest news section  -->
@@ -260,10 +278,10 @@
 
 
 	<!-- start quick-donation-section -->
-	<section  class="quick-donation-section">
-		<div  class="section-overlay section-padding-140">
+	<section class="quick-donation-section">
+		<div class="section-overlay section-padding-140">
 			<div class="container">
-				<div  class="section-heading">
+				<div class="section-heading">
 					<h2>Qui sommes nous ? </h2>
 					<p>Crée en 2009 , Top Print vient renforcer notre Groupe , pour répondre aux besoins de
 						plus en plus croissants de nos client qui consistent en la mise ne place d’opérations
@@ -360,12 +378,12 @@
 		let imageSets = [
 			[
 
-			
-				"assets/images/homepage3/realisation/rea1.jpg" ,
-				"assets/images/homepage3/realisation/rea2.jpg" ,
-				"assets/images/homepage3/realisation/rea3.jpg" ,
-				"assets/images/homepage3/realisation/rea4.jpg" ,
-		
+
+				"assets/images/homepage3/realisation/rea1.jpg",
+				"assets/images/homepage3/realisation/rea2.jpg",
+				"assets/images/homepage3/realisation/rea3.jpg",
+				"assets/images/homepage3/realisation/rea4.jpg",
+
 			],
 
 		];
