@@ -13,6 +13,50 @@
 	<link rel="stylesheet" href="assets/css/swiper.min.css">
 	<link rel="stylesheet" href="assets/css/lightcase.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		.gallery-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+
+		.gallery-container {
+			width: 1000px;
+			max-width: 1000px;
+			/* Adjust based on design */
+			width: 100%;
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.gallery-img {
+			width: 100%;
+			/* Ensures image scales responsively */
+			max-height: 400px;
+			/* Adjust as needed */
+			object-fit: contain;
+			/* Prevents cropping */
+			border-radius: 10px;
+			/* Optional rounded corners */
+		}
+
+
+		.banner-content-test {
+			background: rgba(255, 255, 255, 0.5);
+			/* Blue with 50% transparency */
+			padding: 20px;
+			/* Adjust spacing */
+			text-align: center;
+			/* Center content */
+			border-radius: 10px;
+			/* Optional rounded corners */
+		}
+	</style>
 
 </head>
 
@@ -35,10 +79,12 @@
 	<header class="header">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg p-lg-0">
-				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
-						alt="logo" style="width: 150px; height: auto;"></a>
-				<a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo avantages.png"
-						alt="logo" style="width: 150px; height: auto;"></a>
+				<a class="navbar-brand logo" href="index.html">
+					<img src="assets/images/homepage3/services/logo.png" alt="logo" style="width: 200px; height: auto; margin-top: -20px;">
+				</a>
+				
+				<a class="navbar-brand logo" href="index.html"><img src="assets/images/homepage3/services/logo.png"
+						alt="logo" style="width: 170px; height: auto; "></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -67,17 +113,38 @@
 
 	<!--   start banner section -->
 	<section class="banner banner-3">
-		<div class="section-overlay"></div>
-		<div class="banner-content">
-			<div class="container">
-				<div class="banner-content-text">
-					<h1 class="text-capitalize"><span class="d-sm-block">Impression</span> Sans Limites</h1>
 
-					<h6>Des solutions d'impression pour tous vos projets, petits et grands</h6>
-					<a class="custom-btn">Commençons dès maintenant</a>
+
+		<div class="banner-content">
+			<div class="banner-content-test">
+				<br>
+						
+				<br>
+						
+				<br>
+						
+				<div class="container">
+					<div class="banner-content-text">
+						<h1 class="text-capitalize" style="color: rgb(24, 24, 101);">Impression Sans Limites</h1>
+
+						<h6  style="color: rgb(24, 24, 101);">Des solutions d'impression pour tous vos projets, petits et grands</h6>
+
+						<br>
+
+
+						<div class="qoute text-center">
+							<h4  style="color: rgb(24, 24, 101);">
+								Chez nous, chaque projet d'impression est une transformation de vos idées en un produit
+								tangible, nous donnons vie à vos créations avec précision et qualité.
+							</h4>
+							<br>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
+
 	</section>
 	<!--   end banner section -->
 
@@ -86,6 +153,10 @@
 	<section id="services" class="neta-info-section">
 		<div class="container">
 			<div class="neta-info row justify-content-center no-gutters">
+
+
+
+
 				<div class="col-lg-4 col-sm-6">
 					<div class="neta-info-item"
 						style="display: flex; flex-direction: column; align-items: center; margin: 15px; ">
@@ -93,10 +164,11 @@
 							<img src="assets/images/homepage3/icon/big.png" alt="politician" class="w-100">
 
 						</div>
-						<div onclick="window.location.href='grand.html'" class="neta-info-item-inner">
-							
+						<img src="assets/images/homepage3/services/impression-grande-forma-tunis.jpg" alt="politician"
+							class="rounded-img ">
+						<div onclick="window.location.href='habillage-v.html'" class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-								Impression Grand Format</h6>
+								Impression Grand Format </h6>
 							<br><br>
 						</div>
 					</div>
@@ -110,7 +182,8 @@
 							<img src="assets/images/homepage3/icon/car.png" alt="politician" class="w-100">
 
 						</div>
-						<div  onclick="window.location.href='habillage-v.html'" class="neta-info-item-inner">
+						<img src="assets/images/homepage3/services/camion.jpg" alt="politician" class="rounded-img ">
+						<div onclick="window.location.href='habillage-v.html'" class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Habillage véhicule </h6>
 							<br><br>
@@ -119,12 +192,13 @@
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
-					<div  onclick="window.location.href='petit.html'" class="neta-info-item"
+					<div onclick="window.location.href='petit.html'" class="neta-info-item"
 						style="display: flex; flex-direction: column; align-items: center; margin: 15px; ">
 						<div class="icon-homepage-dark">
 							<img src="assets/images/homepage3/icon/little.png" alt="politician" class="w-100">
 
 						</div>
+						<img src="assets/images/homepage3/services/petite.jpeg" alt="politician" class="rounded-img ">
 						<div class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Impression petite Format </h6>
@@ -135,12 +209,13 @@
 
 
 				<div class="col-lg-4 col-sm-6">
-					<div  onclick="window.location.href='support.html'" class="neta-info-item"
+					<div onclick="window.location.href='support.html'" class="neta-info-item"
 						style="display: flex; flex-direction: column; align-items: center; margin: 15px; ">
 						<div class="icon-homepage-dark">
 							<img src="assets/images/homepage3/icon/billboard.png" alt="politician" class="w-100">
 
 						</div>
+						<img src="assets/images/homepage3/services/2flags.jpg" alt="politician" class="rounded-img ">
 						<div class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Support de communication</h6>
@@ -156,7 +231,8 @@
 							<img src="assets/images/homepage3/icon/vitrine.png" alt="politician" class="w-100">
 
 						</div>
-						<div  onclick="window.location.href='vitrine.html'" class="neta-info-item-inner">
+						<img src="assets/images/homepage3/services/decoupe.jpg" alt="politician" class="rounded-img ">
+						<div onclick="window.location.href='vitrine.html'" class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Vitrine</h6>
 							<br><br>
@@ -165,12 +241,14 @@
 				</div>
 
 				<div class="col-lg-4 col-sm-6">
-					<div  onclick="window.location.href='cadeau.html'" class="neta-info-item"
+					<div onclick="window.location.href='cadeau.html'" class="neta-info-item"
 						style="display: flex; flex-direction: column; align-items: center; margin: 15px;">
 						<div class="icon-homepage-dark">
 							<img src="assets/images/homepage3/icon/cadeau.png" alt="politician" class="w-100">
 
 						</div>
+						<img src="assets/images/homepage3/services/Pink and Blue Modern 3d Printing Services Facebook Post (1).png"
+							alt="politician" class="rounded-img ">
 						<div class="neta-info-item-inner">
 							<h6 style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 								Cadeau</h6>
@@ -211,62 +289,105 @@
 
 	<!-- start latest news section  -->
 	<section id="realisation" class="latest-news-section section-padding-180 section-bg-color ">
-		<div class="container">
+		<div class="container 	">
 			<div class="section-heading">
 				<h2>Réalisations</h2>
-				
-			</div>
-
-			<div class="post-item d-flex justify-content-center align-items-center text-center  ">
-				<div class="card">
-					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
-					<div class="container">
-
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
-					<div class="container">
-
-					</div>
-				</div>
-				<div class="card">
-					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
-					<div class="container">
-
-					</div>
-				</div>
-				<div class="card">
-					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
-					<div class="container">
-
-					</div>
-				</div>
-				<div class="card">
-					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
-					<div class="container">
-
-					</div>
-				</div>
-				<div class="card">
-					<img src="assets/images/homepage3/realisation/rea1.jpg" alt="Avatar" style="width:100%">
-					<div class="container">
-
-					</div>
-				</div>
-
-				<div class="section-heading">
-			
-					<p>Des impressions sur mesure qui allient qualité, créativité et précision</p>
-				</div>
-	
 
 			</div>
 
 
 		</div>
 		</div>
+
+		<div class="gallery-section">
+			<div class="gallery-container swiper-container mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678395302073.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678394849250.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678394854235.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678394854671.jpeg" alt="politician" class="gallery-img">
+					</div>
+					
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678394854769.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678394900872.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678394936762.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678395212738.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678395298504.jpeg" alt="politician" class="gallery-img">
+					</div>
+					
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678395489773.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678395506052.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678395506109.jpeg" alt="politician" class="gallery-img">
+					</div>
+					
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1689934389559.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396551078.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396550777.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396315139.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396312676.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396308978.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396096299.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396033675.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396033321.jpeg" alt="politician" class="gallery-img">
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/realisation/1678396032934.jpeg" alt="politician" class="gallery-img">
+					</div>
+					
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/1.jpg" alt="politician" class="gallery-img">
+
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/homepage3/services/2.jpg" alt="politician" class="gallery-img">
+					</div>
+
+				</div>
+				<!-- Navigation Buttons -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+
+
 	</section>
 	<!-- end latest news section  -->
 
@@ -419,6 +540,26 @@
 			if (e.target === this) closeModal();
 		});
 	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			var swiper = new Swiper(".mySwiper", {
+				loop: true, // Ensures infinite scrolling
+				slidesPerView: 1,
+				spaceBetween: 10,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
+
+			// Debugging: Check if buttons exist
+			console.log("Next button found:", document.querySelector(".swiper-button-next"));
+			console.log("Prev button found:", document.querySelector(".swiper-button-prev"));
+		});
+	</script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>
